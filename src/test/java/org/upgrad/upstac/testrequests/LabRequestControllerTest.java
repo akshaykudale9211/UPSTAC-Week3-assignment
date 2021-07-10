@@ -2,6 +2,7 @@ package org.upgrad.upstac.testrequests;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.test.context.support.WithUserDetails;
@@ -113,6 +114,13 @@ class LabRequestControllerTest {
 
         //Use assertThat() method to perform the following comparison
         //  the exception message should be contain the string "Invalid ID"
+         try {
+             CreateLabResult labResult = getCreateLabResult(testRequest);
+            //    ResponseStatusException responseStatusException = assertThrows(LabRequestController <I>,"ASSERT THROWES");
+
+         }catch(Exception e){
+            System.out.println(e);
+         }
 
     }
 
